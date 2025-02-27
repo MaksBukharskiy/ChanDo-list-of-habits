@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+}
+.container {
+  padding: 20px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin-bottom: 8%;
+  margin-top: 2%;
+}
+.header .menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  margin-right: 3%;
+}
+.header .search-bar {
+  flex-grow: 1;
+  margin: 0 10px;
+  position: relative;
+}
+.header .search-bar input {
+  width: 100%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  padding-left: 40px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+}
+.header .search-bar .fa-search {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+fa-bars-icon{
+  color: white;
+}
+.header .points {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  margin-left: 2%;
+}
+.header .points .fa-star {
+  margin-right: 5px;
+  color: #00aaff;
+}
+.card {
+  background-color: #333;
+  border-radius: 17px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  height: 18%;
+}
+.progress-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+.progress-circle circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+.progress-circle .bg {
+  stroke: #444;
+}
+.progress-circle .progress {
+  stroke-dasharray: 188.4;
+  stroke-dashoffset: 188.4;
+}
+.progress-circle.blue .progress {
+  stroke: #00aaff;
+}
+.progress-circle.pink .progress {
+  stroke: #ff00aa;
+}
+.progress-circle.orange .progress {
+  stroke: #ff6600;
+}
+.progress-circle .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+}
+.progress-circle.blue .percentage {
+  color: #00aaff;
+}
+.progress-circle.pink .percentage {
+  color: #ff00aa;
+}
+.progress-circle.orange .percentage {
+  color: #ff6600;
+}
+.details {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+.details h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 6%;
+  margin-left: 9%;
+}
+.details .stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.details .stats div {
+  text-align: center;
+}
+.details .stats div span {
+  display: block;
+  font-size: 14px;
+}
+.details .stats div span:first-child {
+  color: #888;
+  margin-bottom: 6%;
+  font-size: 20px;
+}
+.details .stats div span:last-child {
+  font-weight: bold;
+  font-size: 23px;
+}
+.add-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 460px) {
+  body {
+    font-size: 10px; /* Уменьшаем размер шрифта для лучшего отображения */
+  }
+
+  .container {
+    padding: 10px; /* Уменьшаем отступы */
+    max-width: 100%; /* Убираем ограничение по ширине */
+    max-height: 100%;
+  }
+
+  .header {
+    flex-direction: row; /* Изменяем направление на вертикальное */
+    align-items: space-between; /* Выравниваем элементы по левому краю */
+  }
+
+  .header .menu-icon {
+    margin-right: 10px; /* Убираем отступ справа */
+    margin-bottom: 5px; /* Добавляем отступ снизу */
+  }
+
+  .header .search-bar {
+    width: 100%; /* Увеличиваем ширину до 100% */
+    margin: 1px; /* Добавляем отступ сверху и снизу */
+  }
+
+  .header .points {
+    font-size: 17px; /* Уменьшаем размер шрифта */
+    margin-left: 5px; /* Убираем отступ слева */
+  }
+
+  .card {
+    flex-direction: row; /* Изменяем направление на вертикальное */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+    height: auto; /* Убираем фиксированную высоту */
+    margin-bottom: 10px; /* Добавляем отступ между карточками */
+    height: 67px;
+  }
+
+  .progress-circle {
+    margin-bottom: 0; /* Добавляем отступ снизу */
+  }
+
+  .details h3 {
+    font-size: 17px;
+     /* Уменьшаем размер заголовка */
+  }
+
+  .details .stats div span:first-child{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+  .details .stats div{
+    align-items: space-between;
+  }
+
+  .details .stats div span:last-child {
+    font-size: 15px;
+  }
+
+
+  .add-button {
+    width: 45px; /* Уменьшаем размер кнопки */
+    height: 45px; /* Уменьшаем размер кнопки */
+    font-size: 17px; /* Уменьшаем размер иконки */
+  }
+
+  /* Дополнительные стили для улучшения адаптивности */
+  img {
+    max-width: 100%; /* Убедитесь, что изображения не выходят за пределы контейнера */
+    height: auto; /* Сохраняем пропорции изображений */
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row; /* Изменяем направление на вертикальное */
+  }
+}
+
+
+
+@media (max-width: 330px) {
+  body {
+    font-size: 10px; /* Уменьшаем размер шрифта для лучшего отображения */
+  }
+
+  .container {
+    padding: 10px; /* Уменьшаем отступы */
+    max-width: 100%; /* Убираем ограничение по ширине */
+    max-height: 100%;
+  }
+
+  .header {
+    flex-direction: row; /* Изменяем направление на вертикальное */
+    align-items: space-between; /* Выравниваем элементы по левому краю */
+  }
+
+  .header .menu-icon {
+    margin-right: 10px; /* Убираем отступ справа */
+    margin-bottom: 5px; /* Добавляем отступ снизу */
+  }
+
+  .header .search-bar {
+    width: 100%; /* Увеличиваем ширину до 100% */
+    margin: 1px; /* Добавляем отступ сверху и снизу */
+  }
+
+  .header .points {
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    margin-left: 5px; /* Убираем отступ слева */
+  }
+
+  .card {
+    flex-direction: row; /* Изменяем направление на вертикальное */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+    height: auto; /* Убираем фиксированную высоту */
+    margin-bottom: 10px; /* Добавляем отступ между карточками */
+    height: 55px;
+  }
+
+  .progress-circle {
+    margin-bottom: 0; /* Добавляем отступ снизу */
+  }
+
+  .details h3 {
+    font-size: 16px; /* Уменьшаем размер заголовка */
+  }
+
+  .details .stats div span:first-child{
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+  .details .stats div{
+    align-items: space-between;
+  }
+
+  .details .stats div span:last-child {
+    font-size: 11.5px;
+  }
+
+
+  .add-button {
+    width: 50px; /* Уменьшаем размер кнопки */
+    height: 50px; /* Уменьшаем размер кнопки */
+    font-size: 17px; /* Уменьшаем размер иконки */
+  }
+
+  /* Дополнительные стили для улучшения адаптивности */
+  img {
+    max-width: 100%; /* Убедитесь, что изображения не выходят за пределы контейнера */
+    height: auto; /* Сохраняем пропорции изображений */
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row; /* Изменяем направление на вертикальное */
+  }
+}
+
+@media (max-width: 300px) {
+  body {
+    font-size: 10px; /* Уменьшаем размер шрифта для лучшего отображения */
+  }
+
+  .container {
+    padding: 10px; /* Уменьшаем отступы */
+    max-width: 100%; /* Убираем ограничение по ширине */
+    max-height: 100%;
+  }
+
+  .header {
+    flex-direction: row; /* Изменяем направление на вертикальное */
+    align-items: space-between; /* Выравниваем элементы по левому краю */
+  }
+
+  .header .menu-icon {
+    margin-right: 10px; /* Убираем отступ справа */
+    margin-bottom: 5px; /* Добавляем отступ снизу */
+  }
+
+  .header .search-bar {
+    width: 100%; /* Увеличиваем ширину до 100% */
+    margin: 1px; /* Добавляем отступ сверху и снизу */
+  }
+
+  .header .points {
+    font-size: 16px; /* Уменьшаем размер шрифта */
+    margin-left: 5px; /* Убираем отступ слева */
+  }
+
+  .card {
+    flex-direction: row; /* Изменяем направление на вертикальное */
+    align-items: flex-start; /* Выравниваем элементы по левому краю */
+    height: auto; /* Убираем фиксированную высоту */
+    margin-bottom: 10px; /* Добавляем отступ между карточками */
+    height:63px;
+  }
+
+  .progress-circle {
+    margin-bottom: 0; /* Добавляем отступ снизу */
+  }
+
+  .details h3 {
+    font-size: 16px; /* Уменьшаем размер заголовка */
+  }
+
+  .details .stats div span:first-child{
+    font-size: 12.5px;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+
+  .details .stats div{
+    align-items: space-between;
+  }
+
+  .details .stats div span:last-child {
+    font-size: 11.5px;
+  }
+
+
+  .add-button {
+    width: 50px; /* Уменьшаем размер кнопки */
+    height: 50px; /* Уменьшаем размер кнопки */
+    font-size: 17px; /* Уменьшаем размер иконки */
+  }
+
+  /* Дополнительные стили для улучшения адаптивности */
+  img {
+    max-width: 100%; /* Убедитесь, что изображения не выходят за пределы контейнера */
+    height: auto; /* Сохраняем пропорции изображений */
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: row; /* Изменяем направление на вертикальное */
+  }
+  @media (max-width: 300px){
+    .details .stats div span:last-child{
+      font-size: 10.7px;
+      text-align: center;
+      align-items: center;
+    }
+    .details .stats div span:first-child{
+      font-size: 13.5px;
+      margin: 6px;
+    }
+    .details .stats{
+      margin-left: -15px;
+      margin-bottom: 14%;
+    }
+    .details h3{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+.progress-circle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444; /* Цвет фона круга */
+}
+
+.brain-icon {
+  width: 80%; /* Размер изображения */
+  height: 80%; /* Размер изображения */
+  object-fit: cover; /* Чтобы изображение сохраняло пропорции */
+  border-radius: 50%; /* Делаем изображение круглым */
+}
+
+
+.progress-circle svg,
+.progress-circle circle,
+.progress-circle .bg,
+.progress-circle .progress,
+.progress-circle .percentage {
+    display: none; /* Скрываем SVG и связанные элементы */
+}
