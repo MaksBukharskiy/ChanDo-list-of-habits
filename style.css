@@ -9,6 +9,11 @@ body {
   max-width: 650px;
   margin: 0 auto;
 }
+
+.ppoo{
+  margin-left: -240px;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -23,6 +28,7 @@ body {
   color: white;
   margin-right: 3%;
 }
+
 .header .search-bar {
   flex-grow: 1;
   margin: 0 10px;
@@ -71,11 +77,25 @@ fa-bars-icon{
   color: inherit;
   height: 18%;
 }
+
+.cardd{
+  display: none;
+}
+
+.carddd{
+  display: none;
+}
+
+.cardddd{
+  display: none;
+}
+
 .progress-circle {
   position: relative;
   width: 60px;
   height: 60px;
 }
+
 .progress-circle svg {
   transform: rotate(-90deg);
 }
@@ -121,16 +141,23 @@ fa-bars-icon{
   flex-grow: 1;
   margin-left: 20px;
 }
+
+.stats{
+  align-items: center;
+}
+
+
 .details h3 {
   margin: 0;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 700;
-  margin-bottom: 6%;
-  margin-left: 9%;
+  margin-top: -1px;
+  margin-bottom: 4%;
+  margin-left: 15%;
 }
 .details .stats {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 10px;
 }
 .details .stats div {
@@ -144,10 +171,12 @@ fa-bars-icon{
   color: #888;
   margin-bottom: 6%;
   font-size: 20px;
+  margin-left: 0;
 }
 .details .stats div span:last-child {
   font-weight: bold;
   font-size: 23px;
+  margin-top: 13px;
 }
 .add-button {
   position: fixed;
@@ -165,11 +194,47 @@ fa-bars-icon{
   cursor: pointer;
 }
 
+.progress-circle {
+  position: relative;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444; /* Цвет фона круга */
+}
 
+.brain-icon {
+  width: 83%; /* Размер изображения */
+  height: 78%; /* Размер изображения */
+  object-fit: cover; /* Чтобы изображение сохраняло пропорции */
+  border-radius: 50%; /* Делаем изображение круглым */
+}
+
+
+.progress-circle svg,
+.progress-circle circle,
+.progress-circle .bg,
+.progress-circle .progress,
+.progress-circle .percentage {
+    display: none; /* Скрываем SVG и связанные элементы */
+}
 
 @media (max-width: 460px) {
   body {
     font-size: 10px; /* Уменьшаем размер шрифта для лучшего отображения */
+  }
+
+  .progress-circle{
+    width: 75px;
+    height: 75px;
+  }
+
+  .brain-icon{
+    width: 80%; /* Размер изображения */
+    height: 80%;
   }
 
   .container {
@@ -216,8 +281,8 @@ fa-bars-icon{
   }
 
   .details .stats div span:first-child{
-    font-size: 15px;
-    margin-left: 10px;
+    font-size: 14px;
+    margin-left: 0;
     margin-top: 2px;
   }
 
@@ -226,7 +291,8 @@ fa-bars-icon{
   }
 
   .details .stats div span:last-child {
-    font-size: 15px;
+    font-size: 12.9px;
+    margin-top: 8px;
   }
 
 
@@ -254,6 +320,21 @@ fa-bars-icon{
   body {
     font-size: 10px; /* Уменьшаем размер шрифта для лучшего отображения */
   }
+
+  .progress-circle{
+    width: 60px;
+    height: 60px;
+  }
+
+  .pop{
+    margin-top: 10px;
+  }
+
+  .brain-icon{
+    width: 68%; /* Размер изображения */
+    height: 68%;
+  }
+
 
   .container {
     padding: 10px; /* Уменьшаем отступы */
@@ -299,7 +380,7 @@ fa-bars-icon{
 
   .details .stats div span:first-child{
     font-size: 13px;
-    margin-left: 10px;
+    margin-left: 0;
     margin-top: 2px;
   }
 
@@ -341,6 +422,19 @@ fa-bars-icon{
     max-height: 100%;
   }
 
+  .progress-circle{
+    width: 53px;
+    height: 53px;
+    margin-top: 5%;
+    margin-left:-6%;
+  }
+
+  .brain-icon{
+    width: 82%; /* Размер изображения */
+    height: 80%;
+  }
+
+
   .header {
     flex-direction: row; /* Изменяем направление на вертикальное */
     align-items: space-between; /* Выравниваем элементы по левому краю */
@@ -379,7 +473,7 @@ fa-bars-icon{
 
   .details .stats div span:first-child{
     font-size: 12.5px;
-    margin-left: 10px;
+    margin-left: 0;
     margin-top: 2px;
   }
 
@@ -408,51 +502,21 @@ fa-bars-icon{
     display: flex;
     flex-direction: row; /* Изменяем направление на вертикальное */
   }
-  @media (max-width: 300px){
+  @media (max-width: 280px){
+    .progress-circle{
+      width: 53px;
+      height: 53px;
+      margin-top: 5%;
+      margin-left:-6%;
+    }
+
     .details .stats div span:last-child{
-      font-size: 10.7px;
-      text-align: center;
-      align-items: center;
+      font-size: 11px;
     }
-    .details .stats div span:first-child{
-      font-size: 13.5px;
-      margin: 6px;
-    }
-    .details .stats{
-      margin-left: -15px;
-      margin-bottom: 14%;
-    }
-    .details h3{
-      margin-bottom: 0;
+  
+    .brain-icon{
+      width: 84%; /* Размер изображения */
+      height: 75%;
     }
   }
-}
-
-
-.progress-circle {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #444; /* Цвет фона круга */
-}
-
-.brain-icon {
-  width: 80%; /* Размер изображения */
-  height: 80%; /* Размер изображения */
-  object-fit: cover; /* Чтобы изображение сохраняло пропорции */
-  border-radius: 50%; /* Делаем изображение круглым */
-}
-
-
-.progress-circle svg,
-.progress-circle circle,
-.progress-circle .bg,
-.progress-circle .progress,
-.progress-circle .percentage {
-    display: none; /* Скрываем SVG и связанные элементы */
 }
